@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #eee;
+}
+
+/* Navbar */
+
+header {
+  display: inline;
+  text-align: center;
+}
+
+header .jumbotron {
+  display: flex;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background-color: #e8e8e8;
+}
+
+header nav {
+  top: 0;
+  padding: 5px;
+  position: sticky;
+  background-color: #0f3b08;
+}
+
+header nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+header nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  font-size: 20px;
+  margin: 20px 20px 0px 20px;
+}
+
+main div {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
