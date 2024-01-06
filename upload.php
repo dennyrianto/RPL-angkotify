@@ -31,7 +31,7 @@ if (isset($_POST['proses'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="upload.css" />
+  <link rel="stylesheet" href="style.css" />
   
 </head>
 <body>
@@ -45,20 +45,21 @@ if (isset($_POST['proses'])) {
       <nav>
         <ul>
           <li><a href="landing-page.html">Home</a></li>
-          <li><a href="payment-page.html">Pembayaran</a></li>
+          <li><a href="lokasi-angkot.html">Lokasi</a></li>
           <li><a href="profile.html">Profil</a></li>
-          <li><a href="#">Help</a></li>
+          <li><a href="help-page.html">Help</a></li>
         </ul>
       </nav>
     </header>
 
+
+  <div class="card" style="text-align: center;">
   <!-- upload -->
   <h3>Upload Dokumen</h3>
-
-<form action=" " method="POST" enctype="multipart/form-data"> 
-  <b>File Upload</b> <input type = "file" name = "NamaFile">
-  <input type="submit" name = "proses" value="Upload">
-</form>
-
+    <form action=" " method="POST" enctype="multipart/form-data"> 
+      <b>File Upload</b> <input type = "file" name = "NamaFile">
+      <input type="submit" name = "proses" value="Upload">
+    </form>
+  </div>
 </body>
 </html>
