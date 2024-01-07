@@ -90,15 +90,17 @@ button:hover {
 }
 
 .card {
+  margin: 50px;
   margin-top: 20px;
   padding: 15px 30px 30px 30px;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 350px;
 }
 
 #lokasi-angkot {
-  flex-direction: row; 
+  flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -107,7 +109,7 @@ button:hover {
   margin-right: 15px;
 }
 
-#lokasi-angkot .card img{
+#lokasi-angkot .card img {
   width: 250px;
   height: 165px;
   border-radius: 15px;
