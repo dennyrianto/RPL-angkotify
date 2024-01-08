@@ -14,15 +14,21 @@ if ($conn->connect_error) {
 }
 
 if (isset($_POST['proses'])) {
-  
-  $direktori = "berkas/";
-  $file_name=$_FILES['NamaFile']['name'];
-  move_uploaded_file($_FILES['NamaFile']['tmp_name'],$direktori.$file_name);
+    $direktori = "berkas/";
+    $file_name = $_FILES['NamaFile']['name'];
+    move_uploaded_file($_FILES['NamaFile']['tmp_name'], $direktori . $file_name);
 
-  mysqli_query($conn, "insert into dokumen set file= '$file_name'");
-
-  echo "<b>File berhasil diupload";
+    $query = "INSERT INTO dokumen SET file = '$file_name'";
+    if (mysqli_query($conn, $query)) {
+        $response = array("status" => "success", "message" => "File berhasil diupload");
+        
+    } else {
+        $response = array("status" => "error", "message" => "Gagal mengunggah file");
+        
+    }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +37,7 @@ if (isset($_POST['proses'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="upload.css" />
+  <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
@@ -61,4 +67,24 @@ if (isset($_POST['proses'])) {
 </form>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        <?php
+        if (isset($_POST['proses'])) {
+            echo "showNotification();";
+        }
+        ?>
+    });
+
+    function showNotification() {
+        var notification = document.createElement("div");
+        notification.className = "notification";
+        notification.innerHTML = "File berhasil diupload";
+        document.body.appendChild(notification);
+
+        setTimeout(function () {
+            notification.style.display = "none";
+        }, 3000); // Menampilkan notifikasi selama 3 detik
+    }
+</script>
 </html>
