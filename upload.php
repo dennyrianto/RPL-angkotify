@@ -37,7 +37,7 @@ if (isset($_POST['proses'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
   
 </head>
 <body>
@@ -73,22 +73,27 @@ if (isset($_POST['proses'])) {
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        <?php
-        if (isset($_POST['proses'])) {
-            echo "showNotification();";
-        }
-        ?>
-    });
-
-    function showNotification() {
-        var notification = document.createElement("div");
-        notification.className = "notification";
-        notification.innerHTML = "File berhasil diupload";
-        document.body.appendChild(notification);
-
-        setTimeout(function () {
-            notification.style.display = "none";
-        }, 3000); // Menampilkan notifikasi selama 3 detik
+    <?php
+    if (isset($_POST['proses'])) {
+        echo "showNotification();";
     }
+    ?>
+});
+
+function showNotification() {
+    var notification = document.createElement("div");
+    notification.className = "notification";
+    notification.innerHTML = "File berhasil diupload";
+    document.body.appendChild(notification);
+
+    // Menambahkan kelas "show" untuk mengubah properti display
+    notification.classList.add("show");
+
+    setTimeout(function () {
+        // Menghapus notifikasi dari DOM setelah 3 detik
+        notification.remove();
+    }, 3000);
+}
+
 </script>
 </html>

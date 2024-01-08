@@ -130,3 +130,23 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: none; /* Mulai dengan notifikasi tersembunyi */
+  opacity: 0; /* Mulai dengan keadaan transparan */
+  transition: opacity 0.3s ease-in-out; /* Animasi transisi opacity */
+}
+
+.notification.show {
+  display: block; /* Menampilkan notifikasi ketika memiliki kelas "show" */
+  opacity: 1; /* Mengubah ke transparan penuh */
+}
