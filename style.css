@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 body {
   margin: 0;
   padding: 0;
@@ -27,6 +26,7 @@ header nav {
   padding: 5px;
   position: sticky;
   background-color: #0f3b08;
+  z-index: 20;
 }
 
 header nav li {
@@ -89,6 +89,44 @@ button:hover {
   margin-left: 20px;
 }
 
+.cardlanding {
+  margin: 50px;
+  margin-top: 20px;
+  padding: 15px 30px 30px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 84vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.logolanding,
+.textlanding {
+  flex: 1;
+}
+
+.logolanding {
+  align-self: center;
+  justify-self: center;
+}
+
+.logokepalalanding {
+  margin: auto;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardlanding > p {
+  width: 40vw;
+}
+
+.mulailanding {
+  padding-top: 5vh;
+}
+
 .card {
   margin: 50px;
   margin-top: 20px;
@@ -140,12 +178,17 @@ footer {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  display: none; /* Mulai dengan notifikasi tersembunyi */
-  opacity: 0; /* Mulai dengan keadaan transparan */
-  transition: opacity 0.3s ease-in-out; /* Animasi transisi opacity */
+  display: none;
+  /* Mulai dengan notifikasi tersembunyi */
+  opacity: 0;
+  /* Mulai dengan keadaan transparan */
+  transition: opacity 0.3s ease-in-out;
+  /* Animasi transisi opacity */
 }
 
 .notification.show {
-  display: block; /* Menampilkan notifikasi ketika memiliki kelas "show" */
-  opacity: 1; /* Mengubah ke transparan penuh */
+  display: block;
+  /* Menampilkan notifikasi ketika memiliki kelas "show" */
+  opacity: 1;
+  /* Mengubah ke transparan penuh */
 }
