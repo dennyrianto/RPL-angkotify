@@ -66,7 +66,7 @@ if ($conn->connect_error) {
     $aksi = htmlspecialchars($data["aksi"]);
 
     // Query insert data
-    $query = "INSERT INTO history (nomor_transaksi, nama, bukti_pembayaran, aksi, waktu) VALUES ('$nomor_transaksi', '$nama', '$bukti_pembayaran', '$aksi', NOW())";
+    $query = "INSERT INTO history (nomor_transaksi, Nama_Pengguna, bukti_pembayaran, aksi, waktu) VALUES ('$nomor_transaksi', '$nama', '$bukti_pembayaran', '$aksi', NOW())";
 
     mysqli_query($conn, $query);
 
