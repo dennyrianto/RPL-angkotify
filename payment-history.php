@@ -37,8 +37,9 @@ date_default_timezone_set('Asia/Jakarta');
       <nav>
         <ul>
           <li><a href="landing-page.html">Home</a></li>
-          <li><a href="lokasi-angkot.html">Lokasi</a></li>
+          <li><a href="lokasi-angkot.html">Pesan Sekarang</a></li>
           <li><a href="profile.html">Profile</a></li>
+          <li><a href="payment-history.php">Riwayat</a></li>
           <li><a href="help-page.html">Help</a></li>
         </ul>
       </nav>

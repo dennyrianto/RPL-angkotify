@@ -53,7 +53,8 @@ if (isset($_POST['proses'])) {
           <li><a href="landing-page.html">Home</a></li>
           <li><a href="lokasi-angkot.html">Pesan Sekarang</a></li>
           <li><a href="profile.html">Profil</a></li>
-          <li><a href="#">Help</a></li>
+          <li><a href="payment-history.php">Riwayat</a></li>
+          <li><a href="help-page.html">Help</a></li>
         </ul>
       </nav>
     </header>
