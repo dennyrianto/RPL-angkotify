@@ -11,6 +11,7 @@ $conn = new mysqli('localhost','root','','angkotify');
 if ($conn->connect_error) {
     die("Koneksi ke database gagal: " . $conn->connect_error);
 }
+date_default_timezone_set('Asia/Jakarta');
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ if ($conn->connect_error) {
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    date_default_timezone_set('Asia/Jakarta');
+    
   </head>
   <body>
     <header>
@@ -55,24 +56,18 @@ if ($conn->connect_error) {
                 </tr>
             </thead>
 
-            <?php 
-  function History($data, $imageName) {
-    global $conn;
+            <!-- <?php 
     
-    // Ambil data dari tiap elemen dalam form
-    $nomor_transaksi = htmlspecialchars($data["nomor_transaksi"]);
-    $nama = htmlspecialchars($data["nama"]);
+    $nama = "Omar";
     $bukti_pembayaran = $imageName; // Menggunakan nama file gambar yang diunggah sebagai bukti pembayaran
     $aksi = htmlspecialchars($data["aksi"]);
 
     // Query insert data
-    $query = "INSERT INTO history (nomor_transaksi, Nama_Pengguna, bukti_pembayaran, aksi, waktu) VALUES ('$nomor_transaksi', '$nama', '$bukti_pembayaran', '$aksi', NOW())";
+    $query = "INSERT INTO history (nomor_transaksi, nama_pengguna, bukti_bayar, aksi, waktu) VALUES ('', '$nama', '$bukti_pembayaran', '$aksi', NOW())";
 
     mysqli_query($conn, $query);
 
-    return mysqli_affected_rows($conn);
-  } 
-?>
+?> -->
 
         </table>
         

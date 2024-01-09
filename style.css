@@ -149,3 +149,9 @@ footer {
   display: block; /* Menampilkan notifikasi ketika memiliki kelas "show" */
   opacity: 1; /* Mengubah ke transparan penuh */
 }
+
+.mini_map {
+  width: 250;
+  height: 165;
+  border-radius: 15px;
+}
