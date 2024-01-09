@@ -51,7 +51,7 @@ if (isset($_POST['proses'])) {
       <nav>
         <ul>
           <li><a href="landing-page.html">Home</a></li>
-          <li><a href="payment-page.html">Pembayaran</a></li>
+          <li><a href="lokasi-angkot.html">Pesan Sekarang</a></li>
           <li><a href="profile.html">Profil</a></li>
           <li><a href="#">Help</a></li>
         </ul>
