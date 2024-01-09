@@ -197,4 +197,5 @@ footer {
   width: 250;
   height: 165;
   border-radius: 15px;
+  overflow: hidden;
 }
