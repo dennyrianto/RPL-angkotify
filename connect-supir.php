@@ -17,7 +17,7 @@
         echo "$conn->connect_error";
         die("Connection Failed : " . $conn->connect_error);
     } else {
-        $stmt = $conn->prepare("INSERT INTO supir(Nama_Supir, NoKTP_Supir, Tgl_Lahir, No_SIM, Plat_Nomor, NoHP_Supir, Pw_Supir) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO supir(Nama_Supir, No_KTP, Tgl_Lahir, No_Sim, Plat_Nomor, NoHP_Supir, Pw_Supir) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $Nama_Supir, $NoKTP_Supir, $Tgl_Lahir, $No_SIM, $Plat_Nomor, $NoHP_Supir, $Pw_Supir);
         $stmt->execute();
         echo "Pendaftaran Berhasil Dilakukan...";
