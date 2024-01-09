@@ -13,6 +13,21 @@ function saveProfile() {
   document.getElementById("email").setAttribute("readonly", true);
   document.getElementById("location").setAttribute("readonly", true);
 
-  // Tambahan: Anda dapat mengirim data profil ke server di sini
-  alert("Profil disimpan!");
+  // Menampilkan notifikasi
+  showNotification("Profil berhasil disimpan!");
+}
+
+function showNotification(message) {
+  // Membuat elemen notifikasi
+  var notification = document.createElement("div");
+  notification.className = "notification";
+  notification.innerHTML = message;
+
+  // Menambahkan notifikasi ke dalam body
+  document.body.appendChild(notification);
+
+  // Menghilangkan notifikasi setelah 3 detik
+  setTimeout(function () {
+    notification.style.display = "none";
+  }, 3000);
 }
