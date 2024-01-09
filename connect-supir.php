@@ -1,7 +1,7 @@
 <?php
     $Nama_Supir = $_POST['Nama_Supir'];
     $NoKTP_Supir = $_POST['NoKTP_Supir'];
-    $Tgl_Lahir = $_POST['Tgl_Lahir'];
+    $Email_Supir = $_POST['Email_Supir'];
     $No_SIM = $_POST['No_SIM'];
     $Plat_Nomor = $_POST['Plat_Nomor'];
     $NoHP_Supir = $_POST['NoHP_Supir'];
@@ -17,8 +17,8 @@
         echo "$conn->connect_error";
         die("Connection Failed : " . $conn->connect_error);
     } else {
-        $stmt = $conn->prepare("INSERT INTO supir(Nama_Supir, No_KTP, Tgl_Lahir, No_Sim, Plat_Nomor, NoHP_Supir, Pw_Supir) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssss", $Nama_Supir, $NoKTP_Supir, $Tgl_Lahir, $No_SIM, $Plat_Nomor, $NoHP_Supir, $Pw_Supir);
+        $stmt = $conn->prepare("INSERT INTO supir(Nama_Supir, No_KTP, Email_Supir, No_Sim, Plat_Nomor, NoHP_Supir, Pw_Supir) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssss", $Nama_Supir, $NoKTP_Supir, $Email_Supir, $No_SIM, $Plat_Nomor, $NoHP_Supir, $Pw_Supir);
         $stmt->execute();
         echo "Pendaftaran Berhasil Dilakukan...";
         $stmt->close();
