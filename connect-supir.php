@@ -11,7 +11,7 @@
     $Pw_Supir = password_hash($Pw_Supir, PASSWORD_DEFAULT);
 
     // Connect ke database
-    $conn = new mysqli('localhost', 'root', '', 'angkotify');
+    $conn = new mysqli('localhost', 'user', '', 'angkotify');
 
     if ($conn->connect_error) {
         echo "$conn->connect_error";
